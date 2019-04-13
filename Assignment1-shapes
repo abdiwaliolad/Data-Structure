@@ -1,0 +1,32 @@
+/*
+ * Project name: shapes Assignment-1
+ * Date: 04.010.2019
+ * Author Name:Abdiwali Olad
+ */
+
+import java.awt.*;
+public class AssignmentShapes {
+
+	public static void main(String[] args) {
+		DrawingPanel panel = new DrawingPanel(220, 150);
+		panel.setBackground(Color.yellow);
+		
+		//creating the graphic panel
+		Graphics g = panel.getGraphics();
+		
+		// create oval color and fill it and set x,y and width,height
+		g.setColor(Color.blue);
+		g.fillOval(50, 25, 40, 40);
+		g.fillOval(130, 25, 40, 40);
+		
+		//create rect color first and fill after that 
+		g.setColor(Color.red);
+		g.fillRect(70, 48, 80, 80);
+		
+		//create straight line with color black
+		g.setColor(Color.black);
+		g.drawLine(70, 90, 150, 90);	
+
+	}
+
+}
