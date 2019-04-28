@@ -1,0 +1,49 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
+/*
+ * projact name: Count Unique
+ * Date:04.03.2019
+ * Author Name: Abdiwali Olad
+ */
+public class CountUnique {
+
+	public static void main(String[] args) {
+		
+		// create Array list
+		
+		ArrayList<Integer> countNumber = new ArrayList<Integer>();
+		
+		countNumber.add(4); //add numbers
+		countNumber.add(1);
+		countNumber.add(6);
+		countNumber.add(4);
+		countNumber.add(1);
+		countNumber.add(6);
+		countNumber.add(7);
+		
+		//print  count number
+		System.out.println(countUniques(countNumber));
+
+	}
+	//create method count unique numbers from the list
+	
+	public static int countUniques(ArrayList<Integer> list) {
+		
+		// use set create int 
+		Set<Integer> uniqueNums = new HashSet<Integer>();
+		
+		// using for add uniquenums and get list size
+		for(int i = 0; i < list.size(); i++) {
+			uniqueNums.add(list.get(i));
+		}
+		
+		// return uniqenums size
+		
+		return uniqueNums.size();
+		
+		
+	}
+
+}
