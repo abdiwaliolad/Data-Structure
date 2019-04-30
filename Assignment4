@@ -1,0 +1,52 @@
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class isUnique {
+	
+	
+
+	public static void main(String[] args) {
+		
+		// create map
+		Map<String,String> list = new HashMap<String,String>();
+		
+		//add all this names 
+		list.put("Marty", "Stepp");
+		list.put("Stuart", "Reges");
+		list.put("Jessica", "Miller");
+		list.put("Amanda", "Camp");
+		list.put("Hall", "Perkins");
+		list.put("Kendrick", "Perkins");
+		list.put("Bruce", "Reges");
+		
+		
+		// call the method here and create boolean
+		boolean ans= isUniques(list);
+		System.out.println("The map is Uniques? " + ans);
+
+  }
+	
+	public static boolean isUniques(Map<String,String> test) {
+		
+     Collection<String> names = test.values();
+      // use set create String 
+  		Set<String> setValue = new HashSet<String>();
+  		Set<String> setKey = new HashSet<String>();
+		for(String key : test.keySet()) {
+			
+			String value = test.get(key);
+			setKey.add(key);
+			if (setValue.contains(value)==false)
+			     setValue.add(value);
+		}
+		// return true
+		if (setKey.size() == setValue.size())
+			return true;
+		
+		//else return false
+		else return false;
+	}
+}
