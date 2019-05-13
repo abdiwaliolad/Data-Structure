@@ -1,0 +1,42 @@
+/*
+ * Projact Name: Write Numbers
+ * Author Name Abdiwali Olad
+ * Date 5.13.2019
+ */
+public class writeNumsAssignment {
+
+	public static void main(String[] args) {
+		
+		
+	writeNums(5);// print 5
+	System.out.println();
+	writeNums(12);//print 12 numbers
+		
+		
+
+	}
+	
+	public static void writeNums(int n) {
+	
+		if (n<0)
+			{throw new IllegalArgumentException("negative numbe");}
+		else if(n == 0) {
+			return ;
+		}
+		else {
+			
+			 writeNums(n-1);
+			 System.out.print(n + ",");
+			
+		}
+		
+	//}	
+//	catch (IllegalAgumentException()){
+//		System.out.print("input negative number. ");
+//		
+//	}
+	
+		
+	}
+
+}
