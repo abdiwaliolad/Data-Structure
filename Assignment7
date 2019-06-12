@@ -1,0 +1,49 @@
+/*
+ * project Name: Section Sort
+ * Date: 06.10.2019
+ * Author Name: Abdiwali Olad
+ */
+public class assignment7 {
+
+	public static void main(String[] args) {
+		
+		int[] num= {5,2,3,1,4,7}; //create array list for 
+		
+		sectionSort(num);
+		for (int i = 0; i < num.length; i ++) {
+			System.out.println(num[i]);
+		}
+	}//create method for sectionSort
+	public static void sectionSort(int[] a) {
+		
+		//for loop create i and the length and the largest 
+		for(int i= a.length -1; i > 0; i --) {
+			//System.out.println(i);
+			int largest = i;
+			
+			//inner for loop j = i find the index for largest element and equal to j
+			for(int j = i -1; j > -1; j--) {
+				
+				if(a[largest] < a[j]) {
+					
+					largest=j;
+				}
+			}
+			
+			swap(a,i,largest);// swap the largest to the end
+			
+		}
+	}
+	// create swap method int a , int i , int j int to be able to swap it 
+	private static void swap(int[] a, int i, int j) {
+		
+		int temp = a[i];
+		a[i]= a[j];
+		a[j]=temp;
+		
+		
+		
+		
+	}
+
+}
