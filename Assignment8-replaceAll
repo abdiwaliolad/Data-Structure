@@ -1,0 +1,40 @@
+/*
+ * Projact name: ReplaceAll
+ * Date:
+ * Authon Name:Abdiwali Olad
+ */
+public class assignment8 {
+
+	public static void main(String[] args) {
+		
+		// create list of arrays
+		int[] num= {11,-7,3,0,14,3};
+		
+		//print num
+		System.out.println(num);
+		
+		//replace 3 to 99 all
+		replaceAll(num,3, 99);
+	
+		//print the num
+		System.out.println(num.toString());
+		
+	}
+	
+	//create method to take per
+	
+	public static void replaceAll(int[] list, int numRep, int rpWith) {
+		
+		for(int i = 0; i < list.length; i++) {
+			
+			if(list[i]==numRep) {
+				list[i]=rpWith;
+			}
+			
+		}
+		
+		
+	}
+	
+
+}
